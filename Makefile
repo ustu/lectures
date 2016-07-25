@@ -2,12 +2,11 @@
 #
 
 # You can set these variables from the command line.
-LECTURES	  = lectures.www
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         =
-BUILDDIR      = build/$(LECTURES)/
-SOURCEDIR     = $(LECTURES)/docs
+BUILDDIR      = build/lectures/$(LECTURES)/
+SOURCEDIR     = lectures/$(LECTURES)/docs
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)

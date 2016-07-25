@@ -3,6 +3,7 @@
 # vi: set nu :
 
 PROJECT_NAME = "lectureswww"
+LECTURES = ENV["LECTURES"]
 
 Vagrant.configure(2) do |config|
   config.vm.synced_folder ".",
@@ -16,7 +17,8 @@ Vagrant.configure(2) do |config|
     lectureswww.ssh.password = '123'
 
     lectureswww.vm.provision :shell, privileged: false,
-      :path => "vagrant/docker/lectureswww/build-docs.sh"
+      :path => "vagrant/docker/lectureswww/build-docs.sh",
+      :env => {LECTURES: LECTURES}
 
     lectureswww.vm.provider 'docker' do |docker|
       docker.name = PROJECT_NAME

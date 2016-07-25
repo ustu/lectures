@@ -1,5 +1,5 @@
-.. image:: https://travis-ci.org/ustu/lectures.www.svg
-    :target: https://travis-ci.org/ustu/lectures.www
+.. image:: https://travis-ci.org/ustu/lectures.svg
+    :target: https://travis-ci.org/ustu/lectures
 
 Инструкция как писать эту документацию
 ======================================
@@ -24,8 +24,14 @@ Sphinx — это генератор документации, который п
 
 .. code-block:: bash
 
-  git clone git@github.com:ustu/lectures.www.git
-  cd lectures.www
+  git clone git@github.com:ustu/lectures.git
+  cd lectures
+
+Инициализация подмодулей (сами лекции)
+
+.. code-block:: bash
+
+    git submodule update --init --recursive --remote
 
 Структура
 ---------
@@ -33,9 +39,7 @@ Sphinx — это генератор документации, который п
 ::
 
    .
-   ├── docs             <----- Лекции в формате RST
-   ├── examples         <----- Исходные коды с примерами из лекций
-   ├── slides           <----- Презентации к лекциям в формате LaTeX
+   ├── docs             <----- Файлы настроек для лекций в формате RST
    ├── vagrant          <----- Docker контейнер для запуска примеров
    ├── make.bat
    ├── Makefile
@@ -53,36 +57,25 @@ Sphinx — это генератор документации, который п
 
 .. code-block:: bash
 
-  make html
+   LECTURES=www make html
 
 В Docker
 
 .. code-block:: bash
 
-   vagrant up --provider=docker
+   LECTURES=www vagrant up --provider=docker
 
 .. code-block:: bash
 
-   vagrant reload
-
-Для Windows
-
-.. code-block:: bash
-
-  make.bat html
-
-Зависимости
------------
-
-Для команды ``make livehtml`` необходимо установить `sphinx-autobuild
-<https://github.com/GaretJax/sphinx-autobuild>`_
+   LECTURES=www vagrant reload
 
 Требования к оформлению
 -----------------------
 
-Смотри `CONTRIBUTING.rst <https://github.com/ustu/lectures.www/blob/master/CONTRIBUTING.rst>`_
+Смотри `CONTRIBUTING.rst
+<https://github.com/ustu/lectures/blob/master/CONTRIBUTING.rst>`_
 
 
 .. image:: https://badges.gitter.im/Join%20Chat.svg
-   :alt: Join the chat at https://gitter.im/ustu/lectures.www
-   :target: https://gitter.im/ustu/lectures.www?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+   :alt: Join the chat at https://gitter.im/ustu/lectures
+   :target: https://gitter.im/ustu/lectures?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge

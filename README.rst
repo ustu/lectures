@@ -4,12 +4,14 @@
 Инструкция как писать эту документацию
 ======================================
 
-Документация написана при помощи языка разметки reStructuredText и генератора Sphinx.
-Sphinx — это генератор документации, который преобразует файлы в формате reStructuredText
-в HTML website и другие форматы (PDF, EPub и man).
+Документация написана при помощи языка разметки reStructuredText и
+генератора Sphinx. Sphinx — это генератор документации, который
+преобразует файлы в формате reStructuredText в HTML website и другие
+форматы (PDF, EPub и man).
 
 * `<https://ru.wikipedia.org/wiki/Sphinx_(генератор_документации)>`_
-* `Документация на русском <https://sphinx-ru.readthedocs.org/ru/latest/>`_
+* `Документация на русском
+  <https://sphinx-ru.readthedocs.org/ru/latest/>`_
 
 Установка
 ---------
@@ -18,25 +20,25 @@ Sphinx — это генератор документации, который п
 
 .. code-block:: bash
 
-  pip install -r requirements.txt
+   $ pip install -r requirements.txt
 
 Клонирование репозитария
 
 .. code-block:: bash
 
-  git clone git@github.com:ustu/lectures.git
-  cd lectures
+   $ git clone git@github.com:ustu/lectures.git
+   $ cd lectures
 
 Инициализация подмодулей (сами лекции)
 
 .. code-block:: bash
 
-    git submodule update --init --recursive --remote
+    $ git submodule update --init --recursive --remote
 
 Структура
 ---------
 
-::
+.. code-block:: text
 
    .
    ├── docs             <----- Файлы настроек для лекций в формате RST
@@ -48,7 +50,8 @@ Sphinx — это генератор документации, который п
    ├── rstlint.py
    ├── CONTRIBUTING.rst
    ├── test.sh          <----- Всякие линтеры и чекеры
-   └── Vagrantfile      <----- Vagrant для автоматизации запуска Docker контейнеров
+   └── Vagrantfile      <----- Vagrant для автоматизации запуска
+                               Docker контейнеров
 
 Сборка
 ------
@@ -57,17 +60,17 @@ Sphinx — это генератор документации, который п
 
 .. code-block:: bash
 
-   LECTURES=www make html
+   $ LECTURES=www make html
 
 В Docker
 
 .. code-block:: bash
 
-   LECTURES=www vagrant up --provider=docker
+   $ LECTURES=www vagrant up --provider=docker
 
 .. code-block:: bash
 
-   LECTURES=www vagrant reload
+   $ LECTURES=www vagrant reload
 
 Требования к оформлению
 -----------------------

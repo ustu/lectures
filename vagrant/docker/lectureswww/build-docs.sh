@@ -7,6 +7,5 @@
 #
 
 
-env
 cd /home/vagrant/lectureswww &&
     make clean html

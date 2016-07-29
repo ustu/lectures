@@ -17,7 +17,6 @@ from sphinx.builders.latex import LaTeXBuilder
 from sphinx.directives.code import CodeBlock
 
 sys.path.insert(0, os.path.abspath('.'))
-sys.path.insert(0, os.path.abspath('../../docs/'))
 
 from common import GLOBAL_LINKS  # noqa
 links_collection = GLOBAL_LINKS
@@ -120,7 +119,7 @@ pygments_style = 'sphinx'
 # -- Options for HTML output ----------------------------------------------
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+# templates_path = ['_templates']
 
 # Add any paths that contain custom themes here, relative to this directory.
 # html_theme_path = []

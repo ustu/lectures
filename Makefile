@@ -179,9 +179,3 @@ pseudoxml:
 
 livehtml:
 	sphinx-autobuild -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
-
-vagrantup:
-	vagrant up postgres
-	vagrant up redis
-	vagrant up nginx
-	vagrant up lectureswww

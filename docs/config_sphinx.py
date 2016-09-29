@@ -5,23 +5,38 @@
 # Copyright © 2016 uralbash <root@uralbash.ru>
 #
 # Distributed under terms of the MIT license.
+
+# standard library
 import os
 import sys
+import subprocess
 from datetime import datetime
 
+# Docs
 import docutils
 from docutils.parsers.rst import directives
-from docutils.parsers.rst.roles import set_classes
 from sphinx.builders.html import StandaloneHTMLBuilder
 from sphinx.builders.latex import LaTeXBuilder
 from sphinx.directives.code import CodeBlock
+from docutils.parsers.rst.roles import set_classes
 
 sys.path.insert(0, os.path.abspath('.'))
 
-from common import GLOBAL_LINKS  # noqa
+from common import GLOBAL_LINKS  # noqa isort:skip
+
+
 links_collection = GLOBAL_LINKS
 
 directives.register_directive('no-code-block', CodeBlock)
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+# Submodules
+CURDIR = os.path.abspath('../')
+bashCommand = "git --git-dir={0}/.git --work-tree={0}".format(CURDIR) \
+    + " submodule update --init --recursive"
+process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+output, error = process.communicate()
 
 # IMAGES
 image_types = ['image/png', 'image/svg+xml', 'image/gif', 'image/jpeg']
@@ -122,7 +137,7 @@ pygments_style = 'sphinx'
 # templates_path = ['_templates']
 
 # Add any paths that contain custom themes here, relative to this directory.
-# html_theme_path = []
+html_theme_path = [os.path.join(HERE, '_themes/lectures'), ]
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
@@ -169,7 +184,8 @@ epub_exclude_files = ['search.html']
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {
-    'http://docs.python.org/': None,
+    'https://docs.python.org/2': None,
+    'https://docs.python.org/3': None,
     'http://docs.sqlalchemy.org/en/latest/': None,
     'http://initd.org/psycopg/docs/': None,
 

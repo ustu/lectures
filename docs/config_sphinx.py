@@ -134,10 +134,14 @@ pygments_style = 'sphinx'
 # -- Options for HTML output ----------------------------------------------
 
 # Add any paths that contain templates here, relative to this directory.
-# templates_path = ['_templates']
+dir_path = os.path.dirname(os.path.realpath(__file__))
+templates_path = [os.path.join(dir_path, '_templates')]
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = [os.path.join(HERE, '_themes/lectures'), ]
+# html_theme_path = [
+#     os.path.join(HERE, 'themes'),
+#     os.path.join(HERE, 'themes/zzzekphinx')
+# ]
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.

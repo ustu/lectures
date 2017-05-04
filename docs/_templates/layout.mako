@@ -89,6 +89,7 @@ withsidebar = bool(toc) and (
 <div id="docs-top-navigation-container" class="body-background">
 <div id="docs-header">
     <div id="docs-version-header">
+        <a class="github-button" href="https://github.com/ustu/lectures.www" data-size="large" data-show-count="true" aria-label="Star ustu/lectures.www on GitHub">Star</a>
         ## Release: <span class="version-num">${release}</span>
         % if release_date:
             ${release_date}
@@ -241,6 +242,21 @@ withsidebar = bool(toc) and (
 
 </div>
 
+<div id="disqus_thread" style="margin-left:234px;"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'wwwlectures'; // required: replace example with your forum shortname
+        var disqus_identifier = document.title;
+        var disqus_title = document.title;
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+
+
 <div id="docs-bottom-navigation" class="docs-navigation-links${', withsidebar' if withsidebar else ''}">
     % if prevtopic:
         Previous:
@@ -258,7 +274,7 @@ withsidebar = bool(toc) and (
         &copy; Copyright ${copyright|h}.
     % endif
     % if show_sphinx:
-        Created using<a href="http://sphinx.pocoo.org/">Sphinx</a> ${sphinx_version|h}.
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> ${sphinx_version|h}.
     % endif
     </div>
 </div>
@@ -284,5 +300,7 @@ withsidebar = bool(toc) and (
 
     <script type="text/javascript" src="${pathto('_static/detectmobile.js', 1)}"></script>
     <script type="text/javascript" src="${pathto('_static/init.js', 1)}"></script>
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 </%block>

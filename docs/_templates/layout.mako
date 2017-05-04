@@ -242,7 +242,8 @@ withsidebar = bool(toc) and (
 
 </div>
 
-<div id="disqus_thread" style="margin-left:234px;"></div>
+    % if withsidebar:
+    <div id="disqus_thread" style="margin-left:234px;"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'wwwlectures'; // required: replace example with your forum shortname
@@ -255,6 +256,7 @@ withsidebar = bool(toc) and (
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
     </script>
+    %endif
 
 
 <div id="docs-bottom-navigation" class="docs-navigation-links${', withsidebar' if withsidebar else ''}">

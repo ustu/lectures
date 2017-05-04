@@ -89,16 +89,29 @@ withsidebar = bool(toc) and (
 <div id="docs-top-navigation-container" class="body-background">
 <div id="docs-header">
     <div id="docs-version-header">
-        Release: <span class="version-num">${release}</span>
+        ## Release: <span class="version-num">${release}</span>
         % if release_date:
-        | Release Date: ${release_date}
-        % else:
-        | Release Date: unreleased
+            ${release_date}
+        ## % else:
+        ## | Release Date: unreleased
         % endif
 
     </div>
 
-    <h1>${docstitle|h}</h1>
+    % if withsidebar:
+        <a href="${pathto('index')}" style="margin-left:30px">Домой</a>
+        <div id="sidebar-search" style="margin-left:50px">
+            <form class="search" action="${pathto('search')}" method="get">
+                <label>
+                    <input type="text" placeholder="search..." name="q" size="50" />
+                </label>
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+            </form>
+        </div>
+    %else:
+        <h1>${docstitle|h}</h1>
+    %endif
 
 </div>
 </div>
@@ -132,39 +145,27 @@ withsidebar = bool(toc) and (
 
     % if withsidebar:
         <div id="docs-sidebar-popout" style="height: 250px;max-height: 250px">
-            <h3><a href="${pathto('index')}">${docstitle|h}</a></h3>
-
-            <p id="sidebar-topnav">
-                <a href="${pathto('contents') or pathto('index')}">Contents</a> |
-                <a href="${pathto('genindex')}">Index</a>
-                % if pdf_url:
-                | <a href="${pdf_url}">PDF</a>
-                % endif
-            </p>
-
-            <div id="sidebar-search">
-                <form class="search" action="${pathto('search')}" method="get">
-                  <label>
-                  Search terms:
-                  <input type="text" placeholder="search..." name="q" size="12" />
-                  </label>
-                  <input type="hidden" name="check_keywords" value="yes" />
-                  <input type="hidden" name="area" value="default" />
-                </form>
-            </div>
-
-            <div style="width:200px;height:120px;"
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- lectures2 -->
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-2884502571619359"
-                    data-ad-slot="1945458535"
-                    data-ad-format="auto"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
+<!-- Yandex.RTB R-A-222712-1 -->
+<div id="yandex_rtb_R-A-222712-1"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-222712-1",
+                renderTo: "yandex_rtb_R-A-222712-1",
+                horizontalAlign: false,
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
         </div>
 
         <div id="docs-sidebar" style="top:268px">

@@ -147,7 +147,7 @@ withsidebar = bool(toc) and (
     % if withsidebar:
         <div id="docs-sidebar-popout" style="height: 250px;max-height: 250px">
 <!-- Yandex.RTB R-A-222712-1 -->
-<div id="yandex_rtb_R-A-222712-1" style="margin-left:-37px"></div>
+<div id="yandex_rtb_R-A-222712-1" style="margin-left:-87px"></div>
 <script type="text/javascript">
     (function(w, d, n, s, t) {
         w[n] = w[n] || [];

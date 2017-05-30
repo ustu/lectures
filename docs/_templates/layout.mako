@@ -54,7 +54,7 @@ withsidebar = bool(toc) and (
 </%def>
 
 
-<div id="docs-container">
+<div id="docs-container" style="max-width: 1300px; min-width: 650px; width: 98%">
 
 
 <%block name="headers">
@@ -147,9 +147,9 @@ withsidebar = bool(toc) and (
     % endif
 
     % if withsidebar:
-        <div id="docs-sidebar-popout" style="height: 250px;max-height: 250px">
+      <div id="docs-sidebar-popout" style="height: 250px;max-height: 250px; width: 288px">
 <!-- Yandex.RTB R-A-222712-1 -->
-<div id="yandex_rtb_R-A-222712-1" style="margin-left:-87px"></div>
+<div id="yandex_rtb_R-A-222712-1" style="margin-left:-11px"></div>
 <script type="text/javascript">
     (function(w, d, n, s, t) {
         w[n] = w[n] || [];
@@ -171,7 +171,7 @@ withsidebar = bool(toc) and (
 </script>
         </div>
 
-        <div id="docs-sidebar" style="top:268px">
+        <div id="docs-sidebar" style="top: 268px; width: 300px">
 
         <div id="sidebar-banner">
             ${parent.bannerad()}
@@ -238,14 +238,19 @@ withsidebar = bool(toc) and (
     </div>
     </%doc>
 
-    <div id="docs-body" class="${'withsidebar' if withsidebar else ''}" >
+
+    % if withsidebar:
+      <div id="docs-body" class="${'withsidebar' if withsidebar else ''}" style="margin-left: 320px" >
+    % else:
+      <div id="docs-body" class="${'withsidebar' if withsidebar else ''}">
+    % endif
         ${next.body()}
     </div>
 
 </div>
 
     % if withsidebar:
-    <div id="disqus_thread" style="margin-left:234px;"></div>
+    <div id="disqus_thread" style="margin-left:320px;"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'wwwlectures'; // required: replace example with your forum shortname
@@ -261,7 +266,7 @@ withsidebar = bool(toc) and (
     %endif
 
 
-<div id="docs-bottom-navigation" class="docs-navigation-links${', withsidebar' if withsidebar else ''}">
+    <div id="docs-bottom-navigation" class="docs-navigation-links${', withsidebar' if withsidebar else ''}" style="margin-left: 320px">
     % if prevtopic:
         Previous:
         <a href="${prevtopic['link']|h}" title="${_('previous chapter')}">${prevtopic['title']}</a>

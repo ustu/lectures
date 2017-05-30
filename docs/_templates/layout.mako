@@ -147,9 +147,9 @@ withsidebar = bool(toc) and (
     % endif
 
     % if withsidebar:
-      <div id="docs-sidebar-popout" style="height: 250px;max-height: 250px; width: 288px;">
+      <div id="docs-sidebar-popout" style="height: 222px;max-height: 250px; width: 288px;">
 <!-- Yandex.RTB R-A-222712-1 -->
-<div id="yandex_rtb_R-A-222712-1" style="margin-left:-11px;margin-top:-17px"></div>
+<div id="yandex_rtb_R-A-222712-1" style="margin-left:-11px;margin-top:-27px"></div>
 <script type="text/javascript">
     (function(w, d, n, s, t) {
         w[n] = w[n] || [];
@@ -171,7 +171,7 @@ withsidebar = bool(toc) and (
 </script>
         </div>
 
-        <div id="docs-sidebar" style="top: 268px; width: 300px">
+        <div id="docs-sidebar" style="top: 238px; width: 300px">
 
         <div id="sidebar-banner">
             ${parent.bannerad()}
@@ -240,7 +240,7 @@ withsidebar = bool(toc) and (
 
 
     % if withsidebar:
-      <div id="docs-body" class="${'withsidebar' if withsidebar else ''}" style="margin-left: 320px;margin-top: 16px !important" >
+      <div id="docs-body" class="${'withsidebar' if withsidebar else ''}" style="margin-left: 314px;margin-top: 16px !important" >
     % else:
       <div id="docs-body" class="${'withsidebar' if withsidebar else ''}">
     % endif

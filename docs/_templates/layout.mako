@@ -61,6 +61,8 @@ withsidebar = bool(toc) and (
 
     ${parent.headers()}
 
+    <meta name="yandex-verification" content="487487bc449cadc7" />
+
     <!-- begin layout.mako headers -->
 
     % if hasdoc('about'):

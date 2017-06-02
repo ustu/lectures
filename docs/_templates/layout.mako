@@ -164,7 +164,9 @@ withsidebar = bool(toc) and (
         <div id="docs-sidebar" style="top: 238px; width: 300px">
 
         <div id="sidebar-banner">
+          %if hasattr(parent, "bannerad"):
             ${parent.bannerad()}
+          %endif
         </div>
 
         <div id="docs-sidebar-inner">

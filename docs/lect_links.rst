@@ -1,4 +1,4 @@
-Смотри так же:
+Смотри также:
 
 .. * `Операционные системы <http://lecturesos.readthedocs.org/>`_
 * `Каналы передачи данных <http://lectureskpd.readthedocs.org/>`_

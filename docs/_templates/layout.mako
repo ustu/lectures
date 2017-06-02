@@ -91,60 +91,50 @@ withsidebar = bool(toc) and (
 <div id="docs-top-navigation-container" class="body-background">
 <div id="docs-header">
     <div id="docs-version-header">
-        <a class="github-button" href="https://github.com/ustu/lectures.www" data-size="large" data-show-count="true" aria-label="Star ustu/lectures.www on GitHub">Star</a>
-        ## Release: <span class="version-num">${release}</span>
-        % if release_date:
-            ${release_date}
-        ## % else:
-        ## | Release Date: unreleased
-        % endif
+      <div style="margin-right: 20px">
+        <a class="github-button"
+          href="https://github.com/ustu/lectures.www" data-size="large"
+          data-show-count="true" aria-label="Star ustu/lectures.www on GitHub">Star</a>
+      </div>
+      ## Release: <span class="version-num">${release}</span>
+      % if release_date:
+        <div style="font-size: 0.7em;margin-top:5px">
+          <center>
+            <p>
+              ${release_date}
+              <a href="${pathto('genindex')}">Index</a>
+            </p>
+          </center>
+        </div>
+      ## % else:
+      ## | Release Date: unreleased
+      % endif
 
     </div>
 
     % if withsidebar:
         <a href="${pathto('index')}" style="margin-left:30px">Домой</a>
-        <div id="sidebar-search" style="margin-left:50px">
-            <form class="search" action="${pathto('search')}" method="get">
-                <label>
-                    <input type="text" placeholder="search..." name="q" size="50" />
-                </label>
-                <input type="hidden" name="check_keywords" value="yes" />
-                <input type="hidden" name="area" value="default" />
-            </form>
-        </div>
     %else:
         <h1>${docstitle|h}</h1>
+
     %endif
 
+    <div id="sidebar-search" style="margin-left:50px">
+        <form class="search" action="${pathto('search')}" method="get">
+            <label>
+              <input type="text" placeholder="search..." name="q" size="40" />
+            </label>
+            <input type="submit" value="${_('Search')}" />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
 </div>
 </div>
 
 <div id="docs-body-container">
 
     <div id="fixed-sidebar" class="${'withsidebar' if withsidebar else ''}">
-
-    % if not withsidebar:
-        <div id="index-nav">
-            <form class="search" action="${pathto('search')}" method="get">
-              <label>
-                 Search terms:
-              <input type="text" placeholder="search..." name="q" size="12" />
-              </label>
-              <input type="submit" value="${_('Search')}" />
-              <input type="hidden" name="check_keywords" value="yes" />
-              <input type="hidden" name="area" value="default" />
-            </form>
-
-            <p>
-            <a href="${pathto('contents') or pathto('index')}">Contents</a> |
-            <a href="${pathto('genindex')}">Index</a>
-            % if pdf_url:
-            | <a href="${pdf_url}">Download as PDF</a>
-            % endif
-            </p>
-
-        </div>
-    % endif
 
     % if withsidebar:
       <div id="docs-sidebar-popout" style="height: 222px;max-height: 250px; width: 288px;">

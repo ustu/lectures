@@ -45,7 +45,7 @@ image_types = ['image/png', 'image/svg+xml', 'image/gif', 'image/jpeg']
 LaTeXBuilder.supported_image_types = image_types
 StandaloneHTMLBuilder.supported_image_types = image_types
 
-html_favicon = '_static/urfu.ico'
+html_favicon = '../_lectures/_static/urfu.ico'
 html_sidebars = {
     '**': ['globaltoc.html',
            'searchbox.html',
@@ -150,7 +150,10 @@ html_theme = 'zzzeeksphinx'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+html_static_path = [
+    '_static',
+    '../_lectures/_static'
+]
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = '-doc'

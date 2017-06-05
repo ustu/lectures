@@ -233,6 +233,7 @@ def setup(app):
     app.add_javascript('js/jquery.fancybox.js')
     app.add_stylesheet('css/jquery.fancybox.css')
     app.add_stylesheet('css/todo.css')
+    app.add_stylesheet('css/custom.css')
 
     # Add roles
     app.add_role('src', sourcecode)

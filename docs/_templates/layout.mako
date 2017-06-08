@@ -122,7 +122,7 @@ withsidebar = bool(toc) and (
     <div id="sidebar-search" style="margin-left:50px">
         <form class="search" action="${pathto('search')}" method="get">
             <label>
-              <input type="text" placeholder="search..." name="q" size="40" />
+              <input type="text" placeholder="search..." name="q" size="28" />
             </label>
             <input type="submit" value="${_('Search')}" />
             <input type="hidden" name="check_keywords" value="yes" />

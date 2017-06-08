@@ -51,7 +51,6 @@ update:
 	git pull
 	cd ../
 	git add .
-	git push git
 	git commit -m "update submodule"
 	git push
 

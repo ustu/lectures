@@ -138,30 +138,10 @@ withsidebar = bool(toc) and (
 
     % if withsidebar:
       <div id="docs-sidebar-popout" style="height: 222px;max-height: 250px; width: 288px;">
-<!-- Yandex.RTB R-A-222712-1 -->
-<div id="yandex_rtb_R-A-222712-1" style="margin-left:-11px;margin-top:-27px"></div>
-<script type="text/javascript">
-    (function(w, d, n, s, t) {
-        w[n] = w[n] || [];
-        w[n].push(function() {
-            Ya.Context.AdvManager.render({
-                blockId: "R-A-222712-1",
-                renderTo: "yandex_rtb_R-A-222712-1",
-                horizontalAlign: false,
-                async: true
-            });
-        });
-        t = d.getElementsByTagName("script")[0];
-        s = d.createElement("script");
-        s.type = "text/javascript";
-        s.src = "//an.yandex.ru/system/context.js";
-        s.async = true;
-        t.parentNode.insertBefore(s, t);
-    })(this, this.document, "yandexContextAsyncCallbacks");
-</script>
-        </div>
+        <div id="yandex-partner"></div>
+      </div>
 
-        <div id="docs-sidebar" style="top: 238px; width: 300px">
+      <div id="docs-sidebar" style="top: 238px; width: 300px">
 
         <div id="sidebar-banner">
           %if hasattr(parent, "bannerad"):
@@ -171,7 +151,7 @@ withsidebar = bool(toc) and (
 
         <div id="docs-sidebar-inner">
 
-        <%
+          <%
             breadcrumb = parents[:]
             if not breadcrumb or breadcrumb[0]['link'] != pathto('index'):
                 breadcrumb = [{'link': pathto('index'), 'title': docstitle}] + breadcrumb
@@ -186,25 +166,25 @@ withsidebar = bool(toc) and (
             else:
                 outermost_link_item = ''
 
-        %>
-        <h3>
+          %>
+          <h3>
             <a href="${h3_toc_item['link']|h}" title="${h3_toc_item['title']}">${h3_toc_item['title']}</a>
-        </h3>
+          </h3>
 
-        ${parent_toc(
-            current_page_name,
-            outermost_link_item)}
+          ${parent_toc(
+          current_page_name,
+          outermost_link_item)}
 
-        % if rtd:
-        <h4>Project Versions</h4>
-        <ul class="version-listing">
-            <li><a href="${pathto('index')}">${release}</a></li>
-        </ul>
-        % endif
-
-        </div>
+          % if rtd:
+            <h4>Project Versions</h4>
+            <ul class="version-listing">
+              <li><a href="${pathto('index')}">${release}</a></li>
+            </ul>
+          % endif
 
         </div>
+
+      </div>
     % endif
 
     </div>

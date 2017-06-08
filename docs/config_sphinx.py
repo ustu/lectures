@@ -230,6 +230,7 @@ def setup(app):
     """
     if 'NO_METRIKA' not in os.environ:
         app.add_javascript('js/metrika.js')
+        app.add_javascript('js/partner.js')
     app.add_javascript('js/jquery.fancybox.js')
     app.add_stylesheet('css/jquery.fancybox.css')
     app.add_stylesheet('css/todo.css')

@@ -49,10 +49,10 @@ help:
 
 update:
 	git pull
-	cd ../
-	git add .
-	git commit -m "update submodule"
-	git push
+	cd ../ && \
+		git add . && \
+		git commit -m "update submodule" && \
+		git push
 
 clean:
 	rm -rf $(BUILDDIR)/*

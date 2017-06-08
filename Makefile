@@ -47,6 +47,14 @@ help:
 	@echo "  linkcheck  to check all external links for integrity"
 	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
 
+update:
+	git pull
+	cd ../
+	git add .
+	git push git
+	git commit -m "update submodule"
+	git push
+
 clean:
 	rm -rf $(BUILDDIR)/*
 

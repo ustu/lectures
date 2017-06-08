@@ -138,7 +138,7 @@ withsidebar = bool(toc) and (
 
     % if withsidebar:
       <div id="docs-sidebar-popout" style="height: 222px;max-height: 250px; width: 288px;">
-        <div id="yandex-partner"></div>
+        <div id="yandex-partner" style="margin-left:-11pxlmargin-top:-27px"></div>
       </div>
 
       <div id="docs-sidebar" style="top: 238px; width: 300px">

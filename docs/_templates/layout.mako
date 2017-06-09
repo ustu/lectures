@@ -62,6 +62,7 @@ withsidebar = bool(toc) and (
     ${parent.headers()}
 
     <meta name="yandex-verification" content="487487bc449cadc7" />
+    <meta name="google-site-verification" content="ULhgwatYB_2i-_WD1bHyhiL6wMylvcu_TNm54byi8jU" />
 
     <!-- begin layout.mako headers -->
 

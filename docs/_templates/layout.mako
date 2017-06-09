@@ -109,9 +109,9 @@ withsidebar = bool(toc) and (
   </div>
 
   <div style="margin: 0 auto">
-    <script type="text/javascript" src="_static/js/orphus.js"></script>
+    <script type="text/javascript" src="/_static/js/orphus.js"></script>
     <a href="//orphus.ru" id="orphus" target="_blank" style="margin-left:20px">
-      <img alt="Система Orphus" src="_static/img/orphus.gif"
+      <img alt="Система Orphus" src="/_static/img/orphus.gif"
       border="0" width="240" height="80" />
     </a>
   </div>

@@ -91,45 +91,50 @@ withsidebar = bool(toc) and (
 
 <div id="docs-top-navigation-container" class="body-background">
 <div id="docs-header">
-    <div id="docs-version-header">
-      <div style="margin-right: 20px">
-        <a class="github-button"
-          href="https://github.com/ustu/lectures.www" data-size="large"
-          data-show-count="true" aria-label="Star ustu/lectures.www on GitHub">Star</a>
+  <div id="docs-version-header">
+    <div style="margin-right: 20px">
+      <a class="github-button"
+        href="https://github.com/ustu/lectures.www" data-size="large"
+        data-show-count="true" aria-label="Star ustu/lectures.www on GitHub">Star</a>
+    </div>
+    ## Release: <span class="version-num">${release}</span>
+    % if release_date:
+      <div style="font-size: 0.7em;margin-top:5px">
+        <center>
+          <p>
+            ${release_date}
+            <a href="${pathto('genindex')}">Index</a>
+          </p>
+        </center>
       </div>
-      ## Release: <span class="version-num">${release}</span>
-      % if release_date:
-        <div style="font-size: 0.7em;margin-top:5px">
-          <center>
-            <p>
-              ${release_date}
-              <a href="${pathto('genindex')}">Index</a>
-            </p>
-          </center>
-        </div>
-      ## % else:
-      ## | Release Date: unreleased
-      % endif
+    ## % else:
+    ## | Release Date: unreleased
+    % endif
+  </div>
 
-    </div>
+  % if withsidebar:
+    <a href="${pathto('index')}" style="margin-left:30px">Домой</a>
+  %else:
+    <h1>${docstitle|h}</h1>
+  %endif
 
-    % if withsidebar:
-        <a href="${pathto('index')}" style="margin-left:30px">Домой</a>
-    %else:
-        <h1>${docstitle|h}</h1>
+  <div id="sidebar-search" style="margin-left:50px">
+    <form class="search" action="${pathto('search')}" method="get">
+      <label>
+        <input type="text" placeholder="search..." name="q" size="28" />
+      </label>
+      <input type="submit" value="${_('Search')}" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+  </div>
 
-    %endif
+  <script type="text/javascript" src="_static/js/orphus.js"></script>
+  <a href="//orphus.ru" id="orphus" target="_blank" style="margin-left:20px">
+    <img alt="Система Orphus" src="_static/img/orphus.gif"
+       border="0" width="240" height="80" />
+  </a>
 
-    <div id="sidebar-search" style="margin-left:50px">
-        <form class="search" action="${pathto('search')}" method="get">
-            <label>
-              <input type="text" placeholder="search..." name="q" size="28" />
-            </label>
-            <input type="submit" value="${_('Search')}" />
-            <input type="hidden" name="check_keywords" value="yes" />
-            <input type="hidden" name="area" value="default" />
-        </form>
-    </div>
 </div>
 </div>
 

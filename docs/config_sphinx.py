@@ -232,6 +232,8 @@ def setup(app):
         app.add_javascript('js/metrika.js')
         app.add_javascript('js/partner.js')
 
+    app.add_javascript('js/orphus.js')
+
     # CSS styles
     app.add_stylesheet('css/todo.css')
     app.add_stylesheet('css/custom.css')

@@ -22,6 +22,8 @@ from sphinx.directives.code import CodeBlock
 from docutils.parsers.rst.roles import set_classes
 
 sys.path.insert(0, os.path.abspath('.'))
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.abspath(os.path.join(HERE, '../_ext')))
 
 from common import GLOBAL_LINKS  # noqa isort:skip
 
@@ -30,7 +32,6 @@ links_collection = GLOBAL_LINKS
 
 directives.register_directive('no-code-block', CodeBlock)
 
-HERE = os.path.dirname(os.path.abspath(__file__))
 
 # Submodules
 CURDIR = os.path.abspath('../')
@@ -97,6 +98,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.viewcode',
     'zzzeeksphinx',
+    'edit_on_github'
 ]
 
 # TODO

@@ -89,11 +89,14 @@ withsidebar = bool(toc) and (
 
 </%block>
 
-
 <div id="docs-top-navigation-container" class="body-background">
 <div id="docs-header">
   % if withsidebar:
     <a href="${pathto('index')}" style="margin-left:30px">Домой</a>
+    <a href="${context['show_on_github_url']}">
+      <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 100; width: 110px"
+      src="${pathto('_static/edit-me-on-github.png', 1)}" alt="Edit me on GitHub">
+    </a>
   %else:
     <h1>${docstitle|h}</h1>
   %endif
@@ -117,25 +120,33 @@ withsidebar = bool(toc) and (
   ##   </a>
   ## </div>
 
-  <div style="margin: 0 auto">
-    ##id="docs-version-header">
+  % if withsidebar:
+    <div style="margin-left: auto; margin-right: 50px; margin-top: 50px">
+      ##id="docs-version-header">
+      ## Release: <span class="version-num">${release}</span>
+      % if release_date:
+        <div style="font-size: 0.7em;margin-top:5px">
+          <p> ${release_date} </p>
+        </div>
+      ## % else:
+      ## | Release Date: unreleased
+      % endif
+    </div>
+  % else:
+    <div style="margin-left: auto; margin-right: 10px;">
     <div style="margin-right: 20px">
       <a class="github-button"
         href="https://github.com/ustu/lectures.www" data-size="large"
         data-show-count="true" aria-label="Star ustu/lectures.www on GitHub">Star</a>
     </div>
-    ## Release: <span class="version-num">${release}</span>
     % if release_date:
-      <div style="font-size: 0.7em;margin-top:5px">
-        <p>
-          ${release_date}
-          <a href="${pathto('genindex')}">Index</a>
-        </p>
+      <div style="font-size: 0.7em;margin-top:5px;text-align: right">
+        <p> ${release_date} </p>
       </div>
-    ## % else:
-    ## | Release Date: unreleased
     % endif
-  </div>
+    </div>
+  % endif
+
 
 </div>
 </div>

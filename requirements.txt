@@ -1,4 +1,4 @@
 sphinx>=1.6
 ipython
-git+https://bitbucket.org/uralbash/zzzeeksphinx@61e1be3
+git+https://bitbucket.org/uralbash/zzzeeksphinx
 sphinx_links

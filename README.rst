@@ -16,24 +16,31 @@
 Установка
 ---------
 
-Установка
-
-.. code-block:: bash
-
-   $ pip install -r requirements.txt
-
 Клонирование репозитария
 
 .. code-block:: bash
 
-   $ git clone git@github.com:ustu/lectures.git
-   $ cd lectures
+   $ git clone git@github.com:ustu/lectures.www.git
+   $ cd lectures.www
 
 Инициализация подмодулей (сами лекции)
 
 .. code-block:: bash
 
     $ git submodule update --init --recursive --remote
+
+Установка
+
+.. code-block:: bash
+
+   $ pip install -r _lectures/requirements.txt
+
+или через ``nix``:
+
+.. code-block:: bash
+
+   $ cd _lectures
+   $ nix-shell
 
 Структура
 ---------

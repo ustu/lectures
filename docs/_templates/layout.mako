@@ -63,6 +63,7 @@ withsidebar = bool(toc) and (
 
     <meta name="yandex-verification" content="487487bc449cadc7" />
     <meta name="yandex-verification" content="1e40e2b274866636" />
+    <meta name="yandex-verification" content="770dff2ea8dc9e6e" />
     <meta name="google-site-verification" content="ULhgwatYB_2i-_WD1bHyhiL6wMylvcu_TNm54byi8jU" />
 
     <!-- begin layout.mako headers -->

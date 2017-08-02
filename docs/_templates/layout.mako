@@ -157,8 +157,8 @@ withsidebar = bool(toc) and (
     <div id="fixed-sidebar" class="${'withsidebar' if withsidebar else ''}">
 
     % if withsidebar:
-      <div id="docs-sidebar-popout" style="height: 222px;max-height: 250px; width: 288px;">
-        <div id="yandex-partner" style="margin-left:-11px;margin-top:-27px"></div>
+      <div id="docs-sidebar-popout" style="height: 221px;max-height: 250px; width: 288px;">
+        <div id="yandex-partner" style="margin-left:-11px;margin-top:-28px"></div>
       </div>
 
       <div id="docs-sidebar" style="top: 238px; width: 300px">

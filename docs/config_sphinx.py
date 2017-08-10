@@ -47,7 +47,7 @@ image_types = ['image/png', 'image/svg+xml', 'image/gif', 'image/jpeg']
 LaTeXBuilder.supported_image_types = image_types
 StandaloneHTMLBuilder.supported_image_types = image_types
 
-html_favicon = '../_lectures/_static/urfu.ico'
+# html_favicon = '../_lectures/_static/urfu-icon.png'
 html_sidebars = {
     '**': ['globaltoc.html',
            'searchbox.html',

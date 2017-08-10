@@ -61,6 +61,11 @@ withsidebar = bool(toc) and (
 
     ${parent.headers()}
 
+    <link rel="shortcut icon" type="image/x-icon"
+    href="${pathto('_static/urfu-icon.png', 1)}" />
+    <link rel="apple-touch-icon"
+    href="${pathto('_static/apple-touch-icon.png', 1)}" />
+
     <meta name="yandex-verification" content="487487bc449cadc7" />
     <meta name="yandex-verification" content="1e40e2b274866636" />
     <meta name="yandex-verification" content="770dff2ea8dc9e6e" />

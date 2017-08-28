@@ -297,7 +297,11 @@ withsidebar = bool(toc) and (
 
     <!-- begin iterate through sphinx environment script_files -->
     % for scriptfile in script_files + self.attr.local_script_files:
+      % if "_static/js" in pathto(scriptfile, 1):
         <script async type="text/javascript" src="${pathto(scriptfile, 1)}"></script>
+      %else:
+        <script type="text/javascript" src="${pathto(scriptfile, 1)}"></script>
+      %endif
     % endfor
     <!-- end iterate through sphinx environment script_files -->
 

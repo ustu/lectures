@@ -254,7 +254,7 @@ withsidebar = bool(toc) and (
 
     % if withsidebar:
     <div id="disqus_thread" style="margin-left:320px;"></div>
-    <script type="text/javascript">
+    <script async type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'wwwlectures'; // required: replace example with your forum shortname
         var disqus_identifier = document.title;
@@ -295,18 +295,9 @@ withsidebar = bool(toc) and (
 
 <%block name="lower_scripts">
 
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-          URL_ROOT:    '${pathto("", 1)}',
-          VERSION:     '${release|h}',
-          COLLAPSE_MODINDEX: false,
-          FILE_SUFFIX: '${file_suffix}'
-      };
-    </script>
-
     <!-- begin iterate through sphinx environment script_files -->
     % for scriptfile in script_files + self.attr.local_script_files:
-        <script type="text/javascript" src="${pathto(scriptfile, 1)}"></script>
+        <script async type="text/javascript" src="${pathto(scriptfile, 1)}"></script>
     % endfor
     <!-- end iterate through sphinx environment script_files -->
 
@@ -314,5 +305,13 @@ withsidebar = bool(toc) and (
     <script type="text/javascript" src="${pathto('_static/init.js', 1)}"></script>
 
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script async type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+          URL_ROOT:    '${pathto("", 1)}',
+          VERSION:     '${release|h}',
+          COLLAPSE_MODINDEX: false,
+          FILE_SUFFIX: '${file_suffix}'
+      };
+    </script>
 
 </%block>

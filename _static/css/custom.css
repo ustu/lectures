@@ -5,3 +5,21 @@
 .yap-layout__logo {
   background: none !important;
 }
+
+html { font-size: 100%; }
+
+@media (max-width: 300px) {
+    html { font-size: 130%; }
+}
+
+@media (min-width: 500px) {
+    html { font-size: 130%; }
+}
+
+@media (min-width: 700px) {
+    html { font-size: 110%; }
+}
+
+@media (min-width: 1200px) {
+    html { font-size: 100%; }
+}

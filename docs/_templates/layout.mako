@@ -270,7 +270,6 @@ withsidebar = bool(toc) and (
     </script>
     %endif
 
-
     <div id="docs-bottom-navigation" class="docs-navigation-links${', withsidebar' if withsidebar else ''}" style="margin-left: 320px">
     % if prevtopic:
         Previous:

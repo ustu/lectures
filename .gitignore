@@ -7,3 +7,5 @@ TODO
 *.sqlite
 .vagrant
 *.pyc
+shell.drv
+.gcroots/

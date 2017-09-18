@@ -11,7 +11,7 @@ let
       owner = "uralbash";
       repo = "sphinx-links";
       rev = "master";
-      sha256 = "1289v3515y3q9dzhrpi4r9nlx4b7hwnf6vr98jbsnqdh68b2hihm";
+      sha256 = "15g7024ijqaz3ggvinlwcqwwycn2gjgwfk72zah5432aa9a6bj8l";
     };
 
     doCheck = false; # some files required by the test seem to be missing

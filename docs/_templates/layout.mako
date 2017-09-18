@@ -161,9 +161,11 @@ withsidebar = bool(toc) and (
 </div>
 </div>
 
+% if withsidebar:
 <div id="hide-sidebar" style="margin-top:20px;position:fixed;margin-left:-59px;background:#e7ff00;width:40px;text-align:left">
   <button id="hide-sidebar-button" onclick="toggleHideSideBar()" style="background:#aaffaa">Hide <<</button>
 </div>
+% endif
 
 <div id="docs-body-container">
 

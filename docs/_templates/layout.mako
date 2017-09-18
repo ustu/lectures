@@ -161,6 +161,10 @@ withsidebar = bool(toc) and (
 </div>
 </div>
 
+<div id="hide-sidebar" style="margin-top:20px;position:fixed;margin-left:-59px;background:#e7ff00;width:40px;text-align:left">
+  <button id="hide-sidebar-button" onclick="toggleHideSideBar()" style="background:#aaffaa">Hide <<</button>
+</div>
+
 <div id="docs-body-container">
 
     <div id="fixed-sidebar" class="${'withsidebar' if withsidebar else ''}">
@@ -316,6 +320,23 @@ withsidebar = bool(toc) and (
           VERSION:     '${release|h}',
           COLLAPSE_MODINDEX: false,
           FILE_SUFFIX: '${file_suffix}'
+      };
+    </script>
+
+    <script async type="text/javascript">
+      var sidebar = document.getElementById('fixed-sidebar');
+      var docsBody = document.getElementById('docs-body');
+      var button = document.getElementById('hide-sidebar-button');
+      function toggleHideSideBar() {
+        if (sidebar.style.display != 'none') {
+          sidebar.style.display = 'none';
+          docsBody.style['margin-left'] = '0px';
+          button.innerHTML = "Show >>";
+        } else {
+          sidebar.style.display = 'block';
+          docsBody.style['margin-left'] = '314px';
+          button.innerHTML = "Hide <<";
+        }
       };
     </script>
 

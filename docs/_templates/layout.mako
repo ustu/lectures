@@ -329,7 +329,7 @@ withsidebar = bool(toc) and (
       var sidebar = document.getElementById('fixed-sidebar');
       var docsBody = document.getElementById('docs-body');
       var button = document.getElementById('hide-sidebar-button');
-      var discusThread = document.getElementById('discus_thread');
+      var discusThread = document.getElementById('disqus_thread');
       function toggleHideSideBar() {
         if (sidebar.style.display != 'none') {
           sidebar.style.display = 'none';

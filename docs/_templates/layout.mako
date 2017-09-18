@@ -329,14 +329,17 @@ withsidebar = bool(toc) and (
       var sidebar = document.getElementById('fixed-sidebar');
       var docsBody = document.getElementById('docs-body');
       var button = document.getElementById('hide-sidebar-button');
+      var discusThread = document.getElementById('discus_thread');
       function toggleHideSideBar() {
         if (sidebar.style.display != 'none') {
           sidebar.style.display = 'none';
           docsBody.style['margin-left'] = '0px';
+          discusThread.style['margin-left'] = '0px';
           button.innerHTML = "Show >>";
         } else {
           sidebar.style.display = 'block';
           docsBody.style['margin-left'] = '314px';
+          discusThread.style['margin-left'] = '320px';
           button.innerHTML = "Hide <<";
         }
       };

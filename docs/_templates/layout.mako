@@ -261,19 +261,7 @@ withsidebar = bool(toc) and (
 </div>
 
     % if withsidebar:
-    <div id="disqus_thread" style="margin-left:320px;"></div>
-    <script async type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'wwwlectures'; // required: replace example with your forum shortname
-        var disqus_identifier = document.title;
-        var disqus_title = document.title;
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
+      <div id="disqus_thread" style="margin-left:320px;"></div>
     %endif
 
     <div id="docs-bottom-navigation" class="docs-navigation-links${', withsidebar' if withsidebar else ''}" style="margin-left: 320px">
@@ -343,6 +331,19 @@ withsidebar = bool(toc) and (
           button.innerHTML = "Hide <<";
         }
       };
+    </script>
+
+    <script async type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'wwwlectures'; // required: replace example with your forum shortname
+        var disqus_identifier = document.title;
+        var disqus_title = document.title;
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
     </script>
 
 </%block>

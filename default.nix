@@ -45,7 +45,6 @@ let
     doCheck = false; # some files required by the test seem to be missing
   };
 
-
   mako = pythonPackages.buildPythonPackage rec {
     name = "mako";
 
@@ -74,6 +73,19 @@ let
     doCheck = false; # some files required by the test seem to be missing
   };
 
+  rstcheck = pythonPackages.buildPythonPackage rec {
+    name = "rstcheck-3.1";
+
+    src = pkgs.fetchurl {
+      url = mirror://pypi/P/Paste/rstcheck-3.1.tar.gz;
+      sha256 = "1s2xxaxnhx6yiax82q2dfi7yxmmzdq5kqcf46cz71hz7g8c2hxq8";
+    };
+
+    buildInputs = with pythonPackages; [ docutils ];
+
+    doCheck = false; # some files required by the test seem to be missing
+  };
+
 in rec {
   pyEnv = stdenv.mkDerivation {
     name = "lectures-1.0.0";
@@ -84,6 +96,8 @@ in rec {
       ipython
       zzzeeksphinx
       sphinx_links
+      docutils
+      rstcheck
     ];
   };
 }

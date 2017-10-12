@@ -7,6 +7,9 @@
 nix-shell:
 	nix-shell . --indirect --add-root .gcroots/dep
 
+cp-github:
+	cp -r ./github/* ../
+
 update-git-submodule:
 	git pull
 	cd ../ && \

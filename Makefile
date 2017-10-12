@@ -10,7 +10,7 @@ nix-shell:
 cp-github:
 	cp -r ./github/* ../
 
-update-git-submodule:
+update-git-submodule: cp-github
 	git pull
 	cd ../ && \
 		git add . && \

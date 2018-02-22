@@ -43,8 +43,8 @@ let
     src = pkgs.fetchFromGitHub{
       owner = "myint";
       repo = "rstcheck";
-      rev = "master";
-      sha256 = "1wmjmmbg43vbkimahlj92g2bzzazwavrwg9f284zpa2npaxrlpq5";
+      rev = "v3.2";
+      sha256 = "1rgcmaps703lxprgf3wmfwg2q54hv75jf7fcn284ckfa37csp4rs";
     };
 
     buildInputs = with pythonPackages; [ docutils ];

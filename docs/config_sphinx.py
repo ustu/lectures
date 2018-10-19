@@ -25,31 +25,31 @@ sys.path.insert(0, os.path.abspath('.'))
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.abspath(os.path.join(HERE, '../_ext')))
 
-# Submodules
-CURDIR = os.path.abspath('../')
-bashCommand = "git --git-dir={0}/.git --work-tree={0}".format(
-    CURDIR
-) + " submodule update --init --recursive"
-process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-output, error = process.communicate()
-
-# Install
-bashCommand = "pip install -r ../_lectures/requirements.txt"
-process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-output, error = process.communicate()
-
-# Install
-bashCommand = "ls -la"
-process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-output, error = process.communicate()
-print(output, error)
-
-# Install
-bashCommand = "pwd"
-process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-output, error = process.communicate()
-print(output, error)
-
+# # Submodules
+# CURDIR = os.path.abspath('../')
+# bashCommand = "git --git-dir={0}/.git --work-tree={0}".format(
+#     CURDIR
+# ) + " submodule update --init --recursive"
+# process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+# output, error = process.communicate()
+#
+# # Install
+# bashCommand = "pip install -r ../_lectures/requirements.txt"
+# process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+# output, error = process.communicate()
+#
+# # Install
+# bashCommand = "ls -la"
+# process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+# output, error = process.communicate()
+# print(output, error)
+#
+# # Install
+# bashCommand = "pwd"
+# process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+# output, error = process.communicate()
+# print(output, error)
+#
 from common import GLOBAL_LINKS  # noqa isort:skip
 
 links_collection = GLOBAL_LINKS

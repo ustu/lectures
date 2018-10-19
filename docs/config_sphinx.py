@@ -35,8 +35,8 @@ directives.register_directive('no-code-block', CodeBlock)
 
 # Submodules
 CURDIR = os.path.abspath('../')
-bashCommand = "git --git-dir={0}/.git --work-tree={0}".format(CURDIR) \
-    + " submodule update --init --recursive"
+bashCommand = "git --git-dir={0}/.git --work-tree={0}".format(
+    CURDIR) + " submodule update --init --recursive"
 process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
 output, error = process.communicate()
 
@@ -62,9 +62,11 @@ numfig = False
 # A dictionary mapping 'figure', 'table' and 'code-block' to strings that are
 # used for format of figure numbers. Default is to use 'Fig. %s' for 'figure',
 # 'Table %s' for 'table' and 'Listing %s' for 'code-block'.
-numfig_format = {"figure": u"Рис. %s",
-                 "table": u"Таблица %s",
-                 "code-block": u"Код %s"}
+numfig_format = {
+    "figure": u"Рис. %s",
+    "table": u"Таблица %s",
+    "code-block": u"Код %s"
+}
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the

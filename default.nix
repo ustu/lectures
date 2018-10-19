@@ -24,14 +24,15 @@ let
       owner = "uralbash";
       repo = "zzzeeksphinx";
       rev = "master";
-      sha256 = "1zrzivdq6ndm5s63g6jk301yna87812pzcr3r54d5hfn9ykqci5y";
+      sha256 = "0d78pqc6h7mc1sfm4cwknr1jph4qlg0rkygfgdhkj45nsq1rm3b1";
     };
 
     buildInputs = [
+      pythonPackages.six
       pythonPackages.Mako
       pythonPackages.pyscss
+      pythonPackages.requests
       pythonPackages.markupsafe
-      pythonPackages.six
     ];
 
     doCheck = false; # some files required by the test seem to be missing
@@ -52,10 +53,12 @@ let
     doCheck = false; # some files required by the test seem to be missing
   };
 
+
 in rec {
   pyEnv = stdenv.mkDerivation {
     name = "lectures-1.0.0";
     buildInputs = with pythonPackages; [
+      ipdb
       Mako
       pyscss
       sphinx

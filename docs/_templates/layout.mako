@@ -165,8 +165,22 @@ withsidebar = bool(toc) and (
     </div>
   % endif
 
-
 </div>
+</div>
+
+<div id="index-nav">
+  <a href="http://lectureskpd.readthedocs.io" target="_blank">
+    Каналы передачи данных
+  </a> |
+  <a href="http://lecturesnet.readthedocs.io" target="_blank">
+    Сетевое программирование
+  </a> |
+  <a href="http://lecturesdb.readthedocs.io" target="_blank">
+    Базы данных
+  </a> |
+  <a href="http://lectureswww.readthedocs.io" target="_blank">
+    Основы Веб-программирования
+  </a>
 </div>
 
 % if withsidebar:

@@ -25,8 +25,30 @@ sys.path.insert(0, os.path.abspath('.'))
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.abspath(os.path.join(HERE, '../_ext')))
 
-from common import GLOBAL_LINKS  # noqa isort:skip
+# Submodules
+CURDIR = os.path.abspath('../')
+bashCommand = "git --git-dir={0}/.git --work-tree={0}".format(
+    CURDIR
+) + " submodule update --init --recursive"
+process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+output, error = process.communicate()
 
+# Install
+bashCommand = "pip install -r requirements.txt"
+process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+output, error = process.communicate()
+
+# Install
+bashCommand = "ls -la"
+process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+output, error = process.communicate()
+
+# Install
+bashCommand = "pwd"
+process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+output, error = process.communicate()
+
+from common import GLOBAL_LINKS  # noqa isort:skip
 
 links_collection = GLOBAL_LINKS
 

@@ -111,14 +111,14 @@ numfig_format = {
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx_links',
-    'sphinx.ext.autodoc',
-    'sphinx.ext.todo',
-    'sphinx.ext.doctest',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.viewcode',
-    'zzzeeksphinx',
-    'edit_on_github'
+    # 'sphinx_links',
+    # 'sphinx.ext.autodoc',
+    # 'sphinx.ext.todo',
+    # 'sphinx.ext.doctest',
+    # 'sphinx.ext.intersphinx',
+    # 'sphinx.ext.viewcode',
+    # 'zzzeeksphinx',
+    # 'edit_on_github'
 ]
 
 # TODO

@@ -35,7 +35,7 @@ directives.register_directive('no-code-block', CodeBlock)
 
 # Submodules
 CURDIR = os.path.abspath('../')
-bashCommand = "git --git-dir={}/.git --work-tree={}".format(
+bashCommand = "git --git-dir={0}/.git --work-tree={0}".format(
     CURDIR
 ) + " submodule update --init --recursive"
 process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)

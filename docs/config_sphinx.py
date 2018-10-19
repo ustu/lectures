@@ -34,7 +34,7 @@ process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
 output, error = process.communicate()
 
 # Install
- bashCommand = '''python /home/docs/checkouts/readthedocs.org/user_builds/lectureswww/envs/master/bin/pip install --upgrade --cache-dir /home/docs/checkouts/readthedocs.org/user_builds/lectureswww/.cache/pip -r ../_lectures/requirements.txt'''
+bashCommand = '''python /home/docs/checkouts/readthedocs.org/user_builds/lectureswww/envs/master/bin/pip install --upgrade --cache-dir /home/docs/checkouts/readthedocs.org/user_builds/lectureswww/.cache/pip -r ../_lectures/requirements.txt'''
 process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
 output, error = process.communicate()
 

@@ -42,11 +42,13 @@ output, error = process.communicate()
 bashCommand = "ls -la"
 process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
 output, error = process.communicate()
+print(output, error)
 
 # Install
 bashCommand = "pwd"
 process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
 output, error = process.communicate()
+print(output, error)
 
 from common import GLOBAL_LINKS  # noqa isort:skip
 

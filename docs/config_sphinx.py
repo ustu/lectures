@@ -34,7 +34,7 @@ process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
 output, error = process.communicate()
 
 # Install
-bashCommand = "pip install -r ../lectures/requirements.txt"
+bashCommand = "pip install -r ../_lectures/requirements.txt"
 process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
 output, error = process.communicate()
 

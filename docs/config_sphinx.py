@@ -32,7 +32,6 @@ links_collection = GLOBAL_LINKS
 
 directives.register_directive('no-code-block', CodeBlock)
 
-
 # Submodules
 CURDIR = os.path.abspath('../')
 bashCommand = "git --git-dir={0}/.git --work-tree={0}".format(
@@ -42,10 +41,9 @@ process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
 output, error = process.communicate()
 
 # Install
-bashCommand = "pip install -r requirements.txt"
+bashCommand = "pip install -r _lectures/requirements.txt"
 process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
 output, error = process.communicate()
-
 
 # IMAGES
 image_types = ['image/png', 'image/svg+xml', 'image/gif', 'image/jpeg']

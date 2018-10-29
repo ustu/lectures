@@ -4,7 +4,9 @@
 #
 
 all:
-	cd ../ && nix-shell ./_lectures/default.nix \
+	cd ../ \
+		&& make clean \
+		&& nix-shell ./_lectures/default.nix \
 		--indirect --add-root .gcroots/dep \
 		--run "make html test"
 

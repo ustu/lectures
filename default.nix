@@ -4,6 +4,50 @@ let
   stdenv = pkgs.stdenv;
   pythonPackages = pkgs.python3Packages;
 
+
+  babel = pythonPackages.buildPythonPackage rec {
+    name = "babel";
+
+    src = pkgs.fetchFromGitHub {
+      owner = "python-babel";
+      repo = "babel";
+      rev = "v2.6.0";
+      sha256 = "1j18gfrln06bz58rysy18myqdb7np7ikagww4qv4qsjvmd0rjnpv";
+    };
+
+    buildInputs = [
+      pythonPackages.pytz
+    ];
+
+    doCheck = false; # some files required by the test seem to be missing
+  };
+
+  mysphinx = pythonPackages.buildPythonPackage rec {
+    name = "sphinx";
+
+    src = pkgs.fetchFromGitHub {
+      owner = "sphinx-doc";
+      repo = "sphinx";
+      rev = "v1.8.1";
+      sha256 = "16gn0rqpsnrbrggvdy40krz2xs9fdnys87jqmdz45zdv8y3lkc7p";
+    };
+
+    buildInputs = [
+      babel
+      pythonPackages.six
+      pythonPackages.pytz
+      pythonPackages.pygments
+      pythonPackages.jinja2
+      pythonPackages.alabaster
+      pythonPackages.imagesize
+      pythonPackages.requests
+      pythonPackages.snowballstemmer
+      pythonPackages.sphinxcontrib-websupport
+    ];
+
+    doCheck = false; # some files required by the test seem to be missing
+  };
+
   sphinx_links = pythonPackages.buildPythonPackage rec {
     name = "sphinx_links";
 
@@ -61,7 +105,7 @@ in rec {
       ipdb
       Mako
       pyscss
-      sphinx
+      mysphinx
       ipython
       zzzeeksphinx
       sphinx_links

@@ -8,6 +8,9 @@ all:
 		--indirect --add-root .gcroots/dep \
 		--run "make html test"
 
+clean:
+	cd ../ && make clean
+
 nix-shell:
 	nix-shell . --indirect --add-root .gcroots/dep
 

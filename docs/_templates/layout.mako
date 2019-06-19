@@ -169,16 +169,16 @@ withsidebar = bool(toc) and (
 </div>
 
 <div id="index-nav">
-  <a href="http://lectureskpd.readthedocs.io" target="_blank">
+  <a href="http://lectureskpd.readthedocs.io">
     Каналы передачи данных
   </a> |
-  <a href="http://lecturesnet.readthedocs.io" target="_blank">
+  <a href="http://lecturesnet.readthedocs.io">
     Сетевое программирование
   </a> |
-  <a href="http://lecturesdb.readthedocs.io" target="_blank">
+  <a href="http://lecturesdb.readthedocs.io">
     Базы данных
   </a> |
-  <a href="http://lectureswww.readthedocs.io" target="_blank">
+  <a href="http://lectureswww.readthedocs.io">
     Основы Веб-программирования
   </a>
 </div>
